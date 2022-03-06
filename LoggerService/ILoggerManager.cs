@@ -5,7 +5,7 @@ namespace LoggerService
     public interface ILoggerManager
     {
         void LogInfo(string message);
-        void LogWarning(string message);
+        void LogWarn(string message);
         void LogDebug(string message);
         void LogError(string message);
     }
@@ -34,7 +34,7 @@ namespace LoggerService
             _logger.Info(message);
         }
 
-        public void LogWarning(string message)
+        public void LogWarn(string message)
         {
             _logger.Warn(message);
         }
