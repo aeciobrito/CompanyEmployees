@@ -9,6 +9,7 @@ LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nl
 builder.Services.ConfigureCors(); //extension
 builder.Services.ConfigureIISIntegration(); //extension
 builder.Services.ConfigureLoggerService(); //extension
+builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
